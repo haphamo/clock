@@ -15,5 +15,36 @@
       <div class="hand hour"></div>
     </div>
   </div>
+  <script>
+
+  const secondHand = document.querySelector(".hand.second");
+  const minuteHand = document.querySelector(".hand.minute")
+  const hourHand = document.querySelector(".hand.hour")
+
+
+  const setDate = function() {
+    const now = new Date()
+    const second = now.getSeconds()
+    const minute = now.getMinutes()
+    const hour = now.getHours()
+    if(second === 0) {
+      hand.style.transform = "0"
+      console.log('stop')
+    }
+    // console.log(second)
+    
+    // convert to degrees
+    const secondsToDegrees = ((second / 60) * 360) + 90
+    const minutesToDegrees = ((minute / 60) * 360) + 90
+    const hoursToDegrees = ((hour / 12) * 360) + 90
+    secondHand.style.transform = `rotate(${secondsToDegrees}deg)`
+    minuteHand.style.transform = `rotate(${minutesToDegrees}deg)`
+    hourHand.style.transform = `rotate(${hoursToDegrees}deg)`
+
+  }
+
+ setInterval(setDate, 1000)
+
+  </script>
 </body>
 </html>

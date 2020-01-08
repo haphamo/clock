@@ -13,24 +13,23 @@
   height: 10px;
   background:black;
   position: absolute;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
 }
 
 .hand.second {
-  transform: rotate(45deg);
   background-color: brown;
+  height: 5px;
 }
 .hand.minute {
-  transform: rotate(10deg);
   background-color: rgb(42, 61, 165);
+  width: 160px;
 }
 .hand.hour {
-  transform: rotate(30deg);
   background-color: rgb(55, 97, 68);
 }
 
-.hand.sec
-
-
 body {
-  background-color: rgb(214, 143, 102);
+  background: rgb(214, 143, 102);
 }
