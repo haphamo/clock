@@ -16,21 +16,22 @@
   transform-origin: 100%;
   transform: rotate(90deg);
   transition: all 0.05s;
+  border-radius: 50%;
 }
 
 .hand.second {
-  background-color: rgba(214, 160, 160, 0.781);
+  background-color: rgb(248, 71, 71);
   height: 5px;
 }
 .hand.minute {
-  background-color: rgb(226, 136, 95);
+  background-color: black;
   width: 170px;
   left: 9%;
   top: 28%;
   
 }
 .hand.hour {
-  background-color: rgb(180, 50, 72);
+  background-color: black;
 
 }
 .center {
