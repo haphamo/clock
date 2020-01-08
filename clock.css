@@ -1,0 +1,17 @@
+#clockface {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 1em solid rgb(180, 66, 66);
+  background-color: rgb(236, 214, 214)
+}
+
+.hand {
+  width: 200px;
+  height: 10px;
+  background:black;
+}
+
+body {
+  background-color: rgb(214, 143, 102);
+}
