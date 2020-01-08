@@ -19,17 +19,27 @@
 }
 
 .hand.second {
-  background-color: brown;
+  background-color: rgba(214, 160, 160, 0.781);
   height: 5px;
 }
 .hand.minute {
-  background-color: rgb(42, 61, 165);
-  width: 160px;
+  background-color: rgb(226, 136, 95);
+  width: 170px;
+  left: 9%;
+  top: 28%;
+  
 }
 .hand.hour {
-  background-color: rgb(55, 97, 68);
-}
+  background-color: rgb(180, 50, 72);
 
+}
+.center {
+  width: 7%;
+  height: 7%;
+  border-radius: 50%;
+  background-color: rgb(99, 18, 18);
+  transform: translateX(23ch);
+}
 body {
   background: rgb(214, 143, 102);
 }
