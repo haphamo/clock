@@ -3,14 +3,33 @@
   height: 400px;
   border-radius: 50%;
   border: 1em solid rgb(180, 66, 66);
-  background-color: rgb(236, 214, 214)
+  background-color: rgb(236, 214, 214);
+  display: flex;
+  align-items: center;
 }
 
 .hand {
   width: 200px;
   height: 10px;
   background:black;
+  position: absolute;
 }
+
+.hand.second {
+  transform: rotate(45deg);
+  background-color: brown;
+}
+.hand.minute {
+  transform: rotate(10deg);
+  background-color: rgb(42, 61, 165);
+}
+.hand.hour {
+  transform: rotate(30deg);
+  background-color: rgb(55, 97, 68);
+}
+
+.hand.sec
+
 
 body {
   background-color: rgb(214, 143, 102);
