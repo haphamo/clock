@@ -29,35 +29,37 @@
   const hourHand = document.querySelector(".hand.hour")
   const hand = document.querySelector(".hand")
 
-  const now = new Date()
-  const second = now.getSeconds()
-  const minute = now.getMinutes()
-  const hour = now.getHours()
-
-  const secondsToDegrees = ((second / 60) * 360) + 90
-  const minutesToDegrees = ((minute / 60) * 360) + 90
-  const hoursToDegrees = ((hour / 12) * 360) + 90
-
+  
+  
   const setDate = function() {
+    const now = new Date()
+    const second = now.getSeconds()
+    const minute = now.getMinutes()
+    const hour = now.getHours()
+    const secondsToDegrees = ((second / 60) * 360) + 90
+    const minutesToDegrees = ((minute / 60) * 360) + 90
+    const hoursToDegrees = ((hour / 12) * 360) + 90
     // convert to degrees, adding rotating css styles
     secondHand.style.transform = `rotate(${secondsToDegrees}deg)`
     minuteHand.style.transform = `rotate(${minutesToDegrees}deg)`
     hourHand.style.transform = `rotate(${hoursToDegrees}deg)`
-  }
-  // Text display of time
-  document.getElementById("hour").innerHTML = `${hour}`
-  // Handling display of minutes & seconds
-  if(minute < 10) {
-    document.getElementById("minute").innerHTML = `0${minute}`
-  } else {
-    document.getElementById("minute").innerHTML = `${minute}`
-  }
 
-  if(second < 10) {
-    document.getElementById("second").innerHTML = `0${second}`
-  } else {
-    document.getElementById("second").innerHTML = `${second}`
+    // Text display of time
+    document.getElementById("hour").innerHTML = `${hour}`
+    // Handling display of minutes & seconds
+    if(minute < 10) {
+      document.getElementById("minute").innerHTML = `0${minute}`
+    } else {
+      document.getElementById("minute").innerHTML = `${minute}`
+    }
+  
+    if(second < 10) {
+      document.getElementById("second").innerHTML = `0${second}`
+    } else {
+      document.getElementById("second").innerHTML = `${second}`
+    }
   }
+  
   setInterval(setDate, 1000)
 
   </script>
