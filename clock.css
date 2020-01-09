@@ -8,6 +8,11 @@
   align-items: center;
 }
 
+.clock {
+  display: flex;
+  justify-content: center;
+}
+
 .hand {
   width: 200px;
   height: 10px;
@@ -23,23 +28,27 @@
   background-color: rgb(248, 71, 71);
   height: 5px;
 }
+
 .hand.minute {
-  background-color: black;
-  width: 170px;
-  left: 9%;
-  top: 28%;
-  
+  background-color: black;  
 }
+
 .hand.hour {
   background-color: black;
-
+  width: 170px;
+  right: 50%;
 }
 .center {
   width: 7%;
   height: 7%;
   border-radius: 50%;
+  z-index: 1;
   background-color: rgb(99, 18, 18);
-  transform: translateX(23ch);
+}
+
+.time {
+  text-align: center;
+  font-size: 10vw;
 }
 body {
   background: rgb(214, 143, 102);

@@ -16,23 +16,29 @@
       <div class="center"></div>
     </div>
   </div>
-  <script>
+  <div class="time">
+    <span id="hour"></span>:
+    <span id="minute"></span>:
+    <span id="second"></span>
+  </div>
 
+  <!--Scripts below-->
+  <script>
   const secondHand = document.querySelector(".hand.second");
   const minuteHand = document.querySelector(".hand.minute")
   const hourHand = document.querySelector(".hand.hour")
-
+  const hand = document.querySelector(".hand")
 
   const setDate = function() {
     const now = new Date()
     const second = now.getSeconds()
     const minute = now.getMinutes()
     const hour = now.getHours()
-    if(second === 0) {
-      hand.style.transform = "0"
-      console.log('stop')
-    }
-    // console.log(second)
+    // if(second === 0) {
+    //   hand.style.transform = "0"
+    //   console.log('stop')
+    // }
+    // console.log(`${hour}:${minute}:${second}`)
     
     // convert to degrees
     const secondsToDegrees = ((second / 60) * 360) + 90
@@ -41,11 +47,25 @@
     secondHand.style.transform = `rotate(${secondsToDegrees}deg)`
     minuteHand.style.transform = `rotate(${minutesToDegrees}deg)`
     hourHand.style.transform = `rotate(${hoursToDegrees}deg)`
+    
 
+    document.getElementById("hour").innerHTML = `${hour}`
+    if(minute < 10) {
+      document.getElementById("minute").innerHTML = `0${minute}`
+    } else {
+      document.getElementById("minute").innerHTML = `${minute}`
+    }
+
+    if(second < 10) {
+      document.getElementById("second").innerHTML = `0${second}`
+    } else {
+      document.getElementById("second").innerHTML = `${second}`
+    }
+    
   }
-
- setInterval(setDate, 1000)
-
+  setInterval(setDate, 1000)
+  // document.write(hour)
+  // console.log('hour', hour)
   </script>
 </body>
 </html>
