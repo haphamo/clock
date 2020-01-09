@@ -41,6 +41,7 @@
 .center {
   width: 7%;
   height: 7%;
+  transform: translateX(24ch);
   border-radius: 50%;
   z-index: 1;
   background-color: rgb(99, 18, 18);
