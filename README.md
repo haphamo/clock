@@ -3,5 +3,7 @@
 <p align="center">Building a simple clock from HTML and CSS. </p>
 
 
-<img align="center" src="clock.gif">
+<p align="center"> <img alt="clock" src="clock.gif"></p>
+
+
 ![clock](clock.gif)
