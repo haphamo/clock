@@ -2,8 +2,4 @@
 
 <p align="center">Building a simple clock from HTML and CSS. </p>
 
-
 <p align="center"> <img alt="clock" src="clock.gif"></p>
-
-
-![clock](clock.gif)
